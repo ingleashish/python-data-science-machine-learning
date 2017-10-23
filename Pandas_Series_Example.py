@@ -17,3 +17,20 @@ print(pd_series)
 
 pd_series = pd.Series(data=my_data, index=labels)
 print(pd_series)
+
+print(pd.Series(np_arr, labels))#passing numpy array as data works same way
+print(pd.Series(d))#passing dictionary
+
+print(pd.Series(data=[ sum, len]))#can use built in function as data reference to function
+
+ser1 = pd.Series([911, 100, 101], ["RESCUE","POLICE","AMBULANCE"])
+print(ser1)
+
+ser2 = pd.Series([911, 100, 211], ["RESCUE","POLICE","NA"])
+
+### Indexing Series
+print(ser1["AMBULANCE"])
+
+## Operation on Series
+
+print(ser1 + ser2)
